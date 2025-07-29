@@ -8,7 +8,7 @@
   <body class="bg">
     <div class="overlay">
       <div class="dashboard">
-        <h2>Баланс: <span id="balance">0.00 лв</span></h2>
+        <h2>Баланс: <span id="balance">0 лв</span></h2>
         <button id="refresh">REFRESH</button>
         <button id="clear">CLEAR</button>
 
@@ -16,7 +16,9 @@
           <div class="column">
             <h3>Разходи</h3>
             <div id="expenses" class="list"></div>
-            <button onclick="addExpense()">Добави</button>
+            <button onclick="window.location.href=`add-expense.html`">
+              Добави
+            </button>
           </div>
 
           <div class="column">

@@ -15,16 +15,15 @@ clearBtn.addEventListener(`click`, clear);
 function clear() {
   divIncome.textContent = ``;
   divExpense.textContent = ``;
-  balanceSpan.textContent = `0.00 лв`;
+  balanceSpan.textContent = `0 лв`;
 }
 
 refreshBtn.addEventListener(`click`, () => {
-  let averageBalance = 0;
   incomeRefresh();
   expenseRefresh();
   setTimeout(() => {
     balance();
-  }, 300);
+  }, 500);
 });
 
 async function incomeRefresh() {
@@ -106,6 +105,7 @@ async function expenseRefresh() {
 }
 
 function balance() {
+  let averageBalance = 0;
   balanceSpan.textContent = ``;
   averageBalance = incomeBalance - expenseBalance;
   if (averageBalance < 0) {
