@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Добави разход</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg">
+    <div class="overlay">
+      <div class="dashboard">
+        <h2>Добавяне на разход</h2>
+
+        <form id="expenseForm">
+          <label for="amount">Сума (лв):</label>
+          <input
+            type="number"
+            id="amount"
+            step="0.01"
+            required
+            placeholder="напр. 20.00"
+          />
+
+          <label for="description">Описание:</label>
+          <input
+            type="text"
+            id="description"
+            required
+            placeholder="напр. храна, транспорт..."
+          />
+
+          <button type="submit">Добави разход</button>
+        </form>
+
+        <br />
+        <a href="dashboard.html" style="color: white"
+          >⬅ Обратно към началната страница</a
+        >
+      </div>
+    </div>
+    <script src="addExpense.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+body.bg {
+  background: url("bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box,
+.dashboard {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2em;
+  border-radius: 80px;
+  color: white;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 0.7em;
+  margin: 0.5em 0;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.7em 2em;
+  margin-top: 1em;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkred;
+}
+
+.columns {
+  background-color: #eee;
+  padding: 1em;
+  border-radius: 10px;
+  color: black;
+  width: 100%;
+  max-width: 450px; /* 👈 ново: фиксира ширината */
+  box-sizing: border-box;
+}
+
+.list {
+  height: 250px; /* по-голямо поле */
+  overflow-y: auto; /* скрол при нужда */
+  background-color: white; /* лек контраст ако искаш */
+  color: black;
+  padding: 1%;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.income-item {
+  padding: 0.3em 0.5em;
+  border-bottom: 1px solid #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.95em;
+}
+button#refresh {
+  margin-bottom: 2em;
+}
+@media (max-width: 600px) {
+  .dashboard {
+    width: 95vw; /* почти цялата ширина на екрана */
+    max-width: 95vw;
+    padding: 2em;
+    font-size: 1.1em; /* по-голям текст */
+  }
+
+  h2,
+  h3 {
+    font-size: 1.4em; /* по-четливи заглавия */
+  }
+
+  .list {
+    font-size: 1.1em; /* по-голям текст в списъците */
+  }
+
+  button {
+    width: 100%;
+    padding: 1em;
+    font-size: 1.1em;
+  }
+
+  .column {
+    padding: 1em;
+  }
+}
